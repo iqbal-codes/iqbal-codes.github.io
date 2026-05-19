@@ -67,7 +67,7 @@ export const DATA = {
     { name: "Node.js", icon: Nodejs },
     { name: "Astro", image: "/astro-logo.png" },
     { name: "shadcn/ui", image: "/shadcn-logo.png" },
-    { name: "TanStack Start", image: "/tanstack-logo.png" },
+    { name: "TanStack", image: "/tanstack-logo.png" },
     { name: "tRPC", image: "/trpc-logo.png" },
     { name: "GraphQL", image: "/graphql-logo.png" },
     { name: "PostgreSQL", icon: Postgresql },
