@@ -55,19 +55,10 @@ export const DATA = {
   location: "Bandung, Indonesia",
   locationLink: "https://www.google.com/maps/place/Bandung,+West+Java",
   description:
-    "Senior Software Engineer with 7+ years of experience building scalable web and mobile applications with React, Next.js, React Native, TypeScript, and Node.js.",
+    "Senior Software Engineer building end-to-end web and mobile products, leveraging AI-native workflows to ship faster without sacrificing quality.",
   summary:
-    "Frontend-focused engineer with strong fullstack capabilities, delivering end-to-end systems from UI to backend services across logistics, healthcare, and internal platforms.\n\nI focus on maintainable frontend architecture, engineering velocity, testing strategy, and AI-assisted development workflows that help teams ship faster without sacrificing quality.",
+    "I’m a Senior Software Engineer with 7+ years of experience building production-grade web and mobile applications across logistics, healthcare, and internal business platforms. My background is strong in frontend engineering, but my work has grown into end-to-end product delivery, from user-facing systems to backend integrations, operational workflows, and release processes.\n\nToday, I focus on solving real business problems with pragmatic software. I use AI-native and agentic workflows to accelerate delivery, reduce manual effort, and improve engineering leverage, while staying grounded in solid architecture, testing, and production reliability.\n\nI care about building software that is maintainable, fast to evolve, and trusted in production.",
   avatarUrl: "/profile-photo.png",
-  capabilities: [
-    "Web Development",
-    "Mobile App Development",
-    "Frontend Architecture",
-    "Fullstack Delivery",
-    "Testing and Quality",
-    "CI/CD Workflows",
-    "AI-Assisted Engineering",
-  ],
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
