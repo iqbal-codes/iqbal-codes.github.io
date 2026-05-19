@@ -18,8 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_SITE_URL: https://iqbal-codes.github.io/personal-website
-      NEXT_PUBLIC_BASE_PATH: /personal-website
+      NEXT_PUBLIC_SITE_URL: https://iqbal-codes.github.io
+      NEXT_PUBLIC_BASE_PATH: ""
     steps:
       - name: Checkout
         uses: actions/checkout@v4
