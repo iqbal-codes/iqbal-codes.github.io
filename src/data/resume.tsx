@@ -172,7 +172,7 @@ export const DATA = {
     {
       school: "Bandung State Polytechnic (POLBAN)",
       href: "https://www.polban.ac.id",
-      degree: "Diploma 3 - Software Engineering",
+      degree: "Associate Degree - Software Engineering",
       logoUrl: "/polban-logo.svg",
       start: "2015",
       end: "2018",
