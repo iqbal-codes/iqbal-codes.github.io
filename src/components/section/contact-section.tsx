@@ -24,8 +24,8 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Open to discussing frontend engineering, product work, and
-          collaboration. Reach out by{" "}
+          Open to discussing software engineering, AI-native product
+          development, and real-world problems worth solving. Reach out by{" "}
           <Link
             href={DATA.contact.social.email.url}
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
