@@ -1,92 +1,46 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { cn, withBasePath } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
+import { cn } from "@/lib/utils";
 import Markdown from "react-markdown";
-
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
-  const [imageError, setImageError] = useState(false);
-
-  if (!src || imageError) {
-    return <div className="w-full h-48 bg-muted" />;
-  }
-
-  return (
-    <img
-      src={withBasePath(src)}
-      alt={alt}
-      className="w-full h-48 object-cover"
-      onError={() => setImageError(true)}
-    />
-  );
-}
 
 interface Props {
   title: string;
-  href?: string;
   description: string;
   dates: string;
   tags: readonly string[];
-  link?: string;
-  image?: string;
-  video?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
     href: string;
   }[];
   className?: string;
+  onOpenDetail: (rect: DOMRect) => void;
 }
 
 export function ProjectCard({
   title,
-  href,
   description,
   dates,
   tags,
-  link,
-  image,
-  video,
   links,
   className,
+  onOpenDetail,
 }: Props) {
   return (
-    <div
+    <button
+      type="button"
+      onClick={(event) => onOpenDetail(event.currentTarget.getBoundingClientRect())}
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex h-full w-full flex-col rounded-xl border border-border overflow-hidden p-6 text-left hover:ring-2 hover:ring-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer",
         className
       )}
     >
-      <div className="relative shrink-0">
-        <Link
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          {video ? (
-              <video
-              src={withBasePath(video)}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-48 object-cover"
-            />
-          ) : image ? (
-            <ProjectImage src={image} alt={title} />
-          ) : (
-            <div className="w-full h-48 bg-muted" />
-          )}
-        </Link>
+      <div className="flex flex-col gap-3 flex-1">
         {links && links.length > 0 && (
-          <div className="absolute top-2 right-2 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {links.map((link, idx) => (
-              <Link
+              <a
                 href={link.href}
                 key={idx}
                 target="_blank"
@@ -100,26 +54,16 @@ export function ProjectCard({
                   {link.icon}
                   {link.type}
                 </Badge>
-              </Link>
+              </a>
             ))}
           </div>
         )}
-      </div>
-      <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">{title}</h3>
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
-          <Link
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            aria-label={`Open ${title}`}
-          >
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <span className="text-xs font-medium text-muted-foreground">View details</span>
         </div>
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
@@ -138,6 +82,6 @@ export function ProjectCard({
           </div>
         )}
       </div>
-    </div>
+    </button>
   );
 }

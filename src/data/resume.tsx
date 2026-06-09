@@ -13,12 +13,13 @@ type Skill = {
   image?: string;
 };
 
-type Project = {
+export type Project = {
   title: string;
   href?: string;
   dates: string;
   active?: boolean;
   description: string;
+  detailDescription?: string;
   technologies: readonly string[];
   links?: readonly {
     icon: ReactNode;
@@ -45,7 +46,107 @@ type Hackathon = {
   }[];
 };
 
-const PROJECTS: Project[] = [];
+const PROJECTS: Project[] = [
+  {
+    title: "DC Trans",
+    dates: "Nabati · 2025 - 2026",
+    description:
+      "Built logistics dispatch system for booking order distribution, vendor tier allocation, timed re-broadcasting, and driver-based shipment tracking.",
+    detailDescription:
+      "Built a logistics dispatch system for booking order distribution, vendor tier allocation, timed re-broadcasting, and driver-based shipment tracking.\n\n### What I worked on\n- Built vendor-facing booking order workflows\n- Supported tier-based vendor access logic\n- Implemented time-based re-broadcast flow for unclaimed orders\n- Contributed to shipment tracking and driver update workflows\n- Integrated upstream order data into logistics operations\n\n### Key focus\nDesigned role-based flows for internal operations, vendors, and drivers while keeping order lifecycle and shipment progress clear across each user group.",
+    technologies: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "REST API",
+      "Role-based UI",
+      "Logistics Workflow",
+    ],
+  },
+  {
+    title: "Crowdver Tool",
+    dates: "eFishery · 2022 - 2025",
+    description:
+      "Developed and maintained offline-first PWA for farmer verification orders in low-connectivity field environments.",
+    detailDescription:
+      "Developed and maintained a Progressive Web App for farmer verification orders used by field teams.\n\n### What I worked on\n- Built verification order management screens\n- Implemented offline-first behavior for unstable network conditions\n- Managed API data and caching for field workflows\n- Contributed to frontend testing and reliability\n\n### Key focus\nBalanced offline usability with API-based synchronization so field operators could continue working even with limited connectivity.",
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "RefineJS",
+      "React Query",
+      "Ant Design",
+      "Jest",
+      "PWA",
+    ],
+  },
+  {
+    title: "eFisheryku",
+    dates: "eFishery · 2022 - 2025",
+    description:
+      "Developed membership app for selling commodities, buying feed, and applying for loans through Kabayan.",
+    detailDescription:
+      "Developed a membership app that enabled users to sell commodities, purchase feed, and apply for loans through the Kabayan feature.\n\n### What I worked on\n- Built customer-facing commerce and financing flows\n- Integrated GraphQL APIs into user journeys\n- Managed server and client state across multiple features\n- Added testing to improve frontend quality\n\n### Key focus\nHandled multiple product journeys in one app while keeping flows understandable for users with different intents: sell, buy, and apply.",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "GraphQL",
+      "React Query",
+      "Zustand",
+      "Jest",
+    ],
+  },
+  {
+    title: "Medinesia",
+    dates: "Pertamedika IHC · 2020 - 2023",
+    description:
+      "Developed hospital information system for patient treatment records while improving legacy frontend performance and maintainability.",
+    detailDescription:
+      "Developed a hospital information system for managing patient treatment data and records.\n\n### What I worked on\n- Built healthcare workflow interfaces\n- Improved legacy React architecture and maintainability\n- Introduced reusable components and standards\n- Reduced build times and improved frontend performance\n\n### Key focus\nImproved an active legacy system without slowing product delivery, while raising consistency and developer experience across the frontend codebase.",
+    technologies: [
+      "JavaScript",
+      "React",
+      "React Query",
+      "Redux",
+      "Recoil",
+      "Ant Design",
+      "Styled Components",
+    ],
+  },
+  {
+    title: "SIRS Admin",
+    dates: "Pertamedika IHC · 2020 - 2023",
+    description:
+      "Built healthcare admin application from scratch with reusable components and fast-delivery-oriented frontend patterns.",
+    detailDescription:
+      "Built a healthcare admin application from scratch using reusable components and frontend patterns focused on performance and maintainability.\n\n### What I worked on\n- Designed frontend structure from zero\n- Built reusable admin UI components\n- Integrated backend-driven admin workflows\n- Established development patterns for faster feature delivery\n\n### Key focus\nCreated a maintainable admin foundation that helped the team move faster while keeping performance and consistency high.",
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "React Query",
+      "Recoil",
+      "Ant Design",
+      "Styled Components",
+    ],
+  },
+  {
+    title: "Circles.MD",
+    dates: "Virtual Spirit · 2019 - 2022",
+    description:
+      "Developed healthcare communication mobile app with real-time workflows and asynchronous state management.",
+    detailDescription:
+      "Developed a React Native communication app for healthcare professionals to support hospital collaboration workflows.\n\n### What I worked on\n- Built mobile interfaces for communication workflows\n- Integrated PubNub for real-time capabilities\n- Integrated Google API for supporting app features\n- Managed complex async flows with Redux Saga\n\n### Key focus\nCreated reliable mobile flows for healthcare communication, where responsiveness and real-time updates mattered for day-to-day use.",
+    technologies: [
+      "TypeScript",
+      "React Native",
+      "PubNub",
+      "Google API",
+      "Redux Saga",
+      "Styled Components",
+    ],
+  },
+];
 const HACKATHONS: Hackathon[] = [];
 
 export const DATA = {

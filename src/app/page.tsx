@@ -6,6 +6,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
+import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
 import { withBasePath } from "@/lib/utils";
@@ -62,16 +63,21 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <ProjectsSection />
+        </BlurFade>
+      </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           <div className="flex flex-col gap-8">
             {DATA.education.map((education, index) => (
               <BlurFade
                 key={education.school}
-                delay={BLUR_FADE_DELAY * 8 + index * 0.05}
+                delay={BLUR_FADE_DELAY * 9 + index * 0.05}
               >
                 <Link
                   href={education.href}
