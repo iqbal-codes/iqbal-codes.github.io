@@ -69,7 +69,61 @@ Built a logistics workflow system for booking order distribution, vendor tier al
 
 ---
 
-## 2. Crowdver Tool — Offline-First Farmer Verification PWA
+## 2. eSuite — Distribution Management System (DMS)
+
+**Company:** eDOT
+**Role:** Senior Frontend Engineer
+**Type:** Web app, enterprise DMS platform, micro-frontend migration
+**Platform:** Web app
+**Context:** Current work experience
+
+### Project overview
+
+eSuite is a Distribution Management System (DMS) platform built by eDOT, designed to help businesses optimize distribution operations — including operational management, real-time insights, stock management, and marketing effectiveness. The platform serves as a centralized hub for managing end-to-end distribution workflows.
+
+The platform originally ran as a monorepo with many tightly coupled modules. A major initiative was launched to rebuild the system into a new v2 architecture using a micro-frontend approach, allowing each module to be developed, deployed, and scaled independently while still functioning as a cohesive product.
+
+### What I worked on
+
+- Led the migration of the **emitra module** from the legacy monorepo to the new v2 micro-frontend architecture.
+- Designed and implemented the micro-frontend integration for emitra using module federation patterns.
+- Migrated existing emitra features from the old codebase to the new v2 structure.
+- Implemented new features within the emitra module post-migration.
+- Identified and resolved bugs in both migrated and newly implemented features.
+- Collaborated with cross-functional teams to ensure smooth transition without disrupting ongoing business operations.
+
+### Technical approach
+
+- Applied micro-frontend architecture using Module Federation to decompose the monolith into independently deployable modules.
+- Structured the emitra module as a standalone micro-frontend that integrates with the host shell application.
+- Managed shared dependencies and state across micro-frontends to maintain a seamless user experience.
+- Implemented incremental migration strategy — moving one module at a time to reduce risk.
+- Maintained backward compatibility during the migration phase to avoid breaking existing workflows.
+- Applied frontend best practices for code quality, testing, and performance optimization in the new architecture.
+
+### Key technical challenges
+
+- Migrating a tightly coupled module from a large monorepo into an independent micro-frontend without breaking existing functionality.
+- Managing shared state and dependencies between micro-frontends and the host shell.
+- Ensuring the emitra module could be developed and deployed independently while still integrating cleanly with other eSuite modules.
+- Handling versioning and compatibility during the incremental migration process.
+- Balancing new feature development with ongoing migration work.
+- Maintaining data consistency and API integration integrity across the architectural transition.
+
+### Technologies
+
+TypeScript, React.js, Micro-Frontend (Module Federation), Webpack, REST API, Monorepo to Micro-Frontend Architecture.
+
+### Portfolio card version
+
+**eSuite — Distribution Management System (DMS)**
+Led the migration of the emitra module from a legacy monorepo to a v2 micro-frontend architecture within eDOT's DMS platform. Implemented new features and resolved bugs while ensuring seamless integration across independently deployable modules.
+
+**Tech focus:** TypeScript, React.js, Micro-Frontend, Module Federation, Monorepo Migration, REST API.
+
+---
+
+## 3. Crowdver Tool — Offline-First Farmer Verification PWA
 
 **Company:** eFishery
 **Role:** Frontend Engineer
@@ -119,7 +173,7 @@ Developed and maintained a PWA for managing farmer verification orders, includin
 
 ---
 
-## 3. CRM Dashboard — Customer, Order & Transaction Management
+## 4. CRM Dashboard — Customer, Order & Transaction Management
 
 **Company:** eFishery
 **Role:** Frontend Engineer
@@ -167,7 +221,7 @@ Built and maintained a CRM dashboard for managing customer profiles, orders, and
 
 ---
 
-## 4. Sales Diary — Mobile App for Sales & Field Teams
+## 5. Sales Diary — Mobile App for Sales & Field Teams
 
 **Company:** eFishery
 **Role:** Frontend Engineer
@@ -215,7 +269,7 @@ Developed a mobile app for sales and field teams to manage supply activities, or
 
 ---
 
-## 5. Fish Internal Tool — Business Unit Admin Platform
+## 6. Fish Internal Tool — Business Unit Admin Platform
 
 **Company:** eFishery
 **Role:** Frontend Engineer
@@ -264,7 +318,7 @@ Created an internal administrative tool for the Fish Business Unit team, support
 
 ---
 
-## 6. eFisheryku — Membership, Commerce & Loan Application App
+## 7. eFisheryku — Membership, Commerce & Loan Application App
 
 **Company:** eFishery
 **Role:** Frontend Engineer
@@ -314,7 +368,7 @@ Developed a membership app that enabled users to sell commodities, purchase feed
 
 ---
 
-## 7. Medinesia — Hospital Information System
+## 8. Medinesia — Hospital Information System
 
 **Company:** Pertamina Bina Medika IHC
 **Role:** Lead Frontend Engineer
@@ -366,7 +420,7 @@ Developed a hospital information system for managing patient treatment data and 
 
 ---
 
-## 8. SIRS Admin — Admin Application Built from Scratch
+## 9. SIRS Admin — Admin Application Built from Scratch
 
 **Company:** Pertamina Bina Medika IHC
 **Role:** Lead Frontend Engineer
@@ -415,7 +469,7 @@ Built a healthcare admin application from scratch using Next.js, applying reusab
 
 ---
 
-## 9. Circles.MD — Healthcare Communication Mobile App
+## 10. Circles.MD — Healthcare Communication Mobile App
 
 **Company:** Virtual Spirit
 **Role:** Frontend Engineer
@@ -464,7 +518,7 @@ Developed a React Native communication app for healthcare professionals, integra
 
 ---
 
-## 10. PropSocial — Property Discovery Mobile App
+## 11. PropSocial — Property Discovery Mobile App
 
 **Company:** Virtual Spirit
 **Role:** Frontend Engineer
@@ -511,7 +565,7 @@ Built mobile app features for property discovery, community reviews, and map-bas
 
 ---
 
-## 11. Updated — Social Media Mobile App
+## 12. Updated — Social Media Mobile App
 
 **Company:** Virtual Spirit
 **Role:** Frontend Engineer
@@ -559,7 +613,7 @@ Developed a React Native social media app focused on photo and video sharing, wi
 
 ---
 
-## 12. VirtualSpace — Team Collaboration & Kanban App
+## 13. VirtualSpace — Team Collaboration & Kanban App
 
 **Company:** Virtual Spirit
 **Role:** Frontend Engineer
@@ -607,7 +661,7 @@ Created a mobile and web collaboration app with team discussions and Kanban task
 
 ---
 
-## 13. Komers App — Mobile E-Commerce App
+## 14. Komers App — Mobile E-Commerce App
 
 **Company:** Komers
 **Role:** Frontend Engineer
@@ -654,54 +708,4 @@ Developed and designed a React Native e-commerce app from scratch for selling te
 
 ---
 
-## 14. eSuite — Distribution Management System (DMS)
 
-**Company:** eDOT
-**Role:** Senior Frontend Engineer
-**Type:** Web app, enterprise DMS platform, micro-frontend migration
-**Platform:** Web app
-**Context:** Current work experience
-
-### Project overview
-
-eSuite is a Distribution Management System (DMS) platform built by eDOT, designed to help businesses optimize distribution operations — including operational management, real-time insights, stock management, and marketing effectiveness. The platform serves as a centralized hub for managing end-to-end distribution workflows.
-
-The platform originally ran as a monorepo with many tightly coupled modules. A major initiative was launched to rebuild the system into a new v2 architecture using a micro-frontend approach, allowing each module to be developed, deployed, and scaled independently while still functioning as a cohesive product.
-
-### What I worked on
-
-- Led the migration of the **emitra module** from the legacy monorepo to the new v2 micro-frontend architecture.
-- Designed and implemented the micro-frontend integration for emitra using module federation patterns.
-- Migrated existing emitra features from the old codebase to the new v2 structure.
-- Implemented new features within the emitra module post-migration.
-- Identified and resolved bugs in both migrated and newly implemented features.
-- Collaborated with cross-functional teams to ensure smooth transition without disrupting ongoing business operations.
-
-### Technical approach
-
-- Applied micro-frontend architecture using Module Federation to decompose the monolith into independently deployable modules.
-- Structured the emitra module as a standalone micro-frontend that integrates with the host shell application.
-- Managed shared dependencies and state across micro-frontends to maintain a seamless user experience.
-- Implemented incremental migration strategy — moving one module at a time to reduce risk.
-- Maintained backward compatibility during the migration phase to avoid breaking existing workflows.
-- Applied frontend best practices for code quality, testing, and performance optimization in the new architecture.
-
-### Key technical challenges
-
-- Migrating a tightly coupled module from a large monorepo into an independent micro-frontend without breaking existing functionality.
-- Managing shared state and dependencies between micro-frontends and the host shell.
-- Ensuring the emitra module could be developed and deployed independently while still integrating cleanly with other eSuite modules.
-- Handling versioning and compatibility during the incremental migration process.
-- Balancing new feature development with ongoing migration work.
-- Maintaining data consistency and API integration integrity across the architectural transition.
-
-### Technologies
-
-TypeScript, React.js, Micro-Frontend (Module Federation), Webpack, REST API, Monorepo to Micro-Frontend Architecture.
-
-### Portfolio card version
-
-**eSuite — Distribution Management System (DMS)**
-Led the migration of the emitra module from a legacy monorepo to a v2 micro-frontend architecture within eDOT's DMS platform. Implemented new features and resolved bugs while ensuring seamless integration across independently deployable modules.
-
-**Tech focus:** TypeScript, React.js, Micro-Frontend, Module Federation, Monorepo Migration, REST API.
