@@ -241,7 +241,7 @@ export const DATA = {
       start: "Apr 2026",
       end: "Present",
       description:
-        "Run a small studio building software, AI, and automation for Indonesian businesses, starting from the real problem in the operation instead of from a technology idea. Built and shipped Pabriq to production — a multi-tenant SaaS for made-to-order workshops that turns messy WhatsApp and spreadsheet ordering into pricing, production tracking, invoicing, and a customer portal. Built the AI layer of that product: sales and operations agents with real business context, tool access, permission rules, and eval checks. Set up an agentic engineering workflow so AI agents take on most of the implementation, testing, and documentation while I keep the architecture, the standards, and the review.",
+        "Run a small studio building software, AI, and automation for Indonesian businesses, starting from the real problem in the operation instead of from a technology idea. Built and shipped Pabriq to production — a multi-tenant SaaS for made-to-order workshops that turns messy WhatsApp and spreadsheet ordering into pricing, production tracking, invoicing, and a customer portal. Built the AI layer of that product: sales and operations agents with real business context, tool access, permission rules, and eval checks. Set up an agentic engineering workflow that runs without hand-holding: a harness across Codex, Claude Code, and Pi agents, deterministic scripts and deeper CI/CD gates, screenshot verification of every UI change against the pen.dev design spec, and model routing per task to keep LLM cost down.",
     },
     {
       company: "PT Kaldu Sari Nabati Indonesia (KSNI)",

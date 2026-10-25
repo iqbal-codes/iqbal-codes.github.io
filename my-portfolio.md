@@ -47,6 +47,50 @@ Multi-tenant SaaS for custom manufacturing workshops, covering tiered pricing, d
 
 ---
 
+## Agentic Engineering Workflow
+
+**Company:** labq.dev (internal engineering practice)
+**Role:** Founder & Product Engineer
+**Type:** Developer tooling, CI/CD, verification pipeline
+**Context:** Applied across every product built at labq.dev
+
+### Project overview
+
+The goal was simple: an agentic development process that does not need babysitting. Agents get a predictable environment, a clear contract, and an automatic verification loop — so a task can run end to end without me stepping in to interpret intent or check the result by hand.
+
+### What I worked on
+
+- **Harness across multiple agent CLIs** — Codex, Claude Code, and Pi agents run behind one contract, so the process is defined by the workflow rather than by whichever tool happens to be running.
+- **Deterministic scripts** replace improvised commands, so the same task produces the same steps every run instead of drifting.
+- **Deeper CI/CD gates** — the pipeline, not the reviewer, is what stops a bad change.
+- **Screenshot verification** — every UI change is captured and checked against the spec and UI/UX defined in pen.dev before it ships.
+- **Model routing per task** — routing each task to an appropriate model keeps LLM spend down without giving up output quality.
+
+### Technical approach
+
+- Design lives in pen.dev, and the design is the contract: implementation and verification are both checked against it.
+- Tools are described to agents as contracts — what to read, what to change, where to stop and ask.
+- Verification is automated and visual, not a matter of trust or of reading diffs line by line.
+
+### Key technical challenges
+
+- Keeping the process predictable across three different agent CLIs with different behaviors and escape hatches.
+- Making verification cheap enough that it always runs, instead of being the step that gets skipped under deadline.
+- Keeping LLM cost proportional to task difficulty rather than flat.
+
+### Technologies
+
+Codex, Claude Code, Pi agent, pen.dev (Pencil), GitHub Actions, CI/CD gates, deterministic shell scripts, screenshot-based visual verification, model routing.
+
+### Portfolio card version
+
+**Agentic Engineering Workflow**
+A development process built for agents that run without supervision: a multi-CLI harness, deterministic scripts and CI/CD gates for predictable steps, screenshot verification of UI against the pen.dev design spec, and model routing per task to keep LLM cost down.
+
+**Tech focus:** Agent harness, deterministic CI/CD, design-spec verification, model routing, engineering leverage.
+
+---
+
 ## 1. DC Trans — Logistics Dispatch & Shipment Tracking System
 
 **Company:** Nabati
