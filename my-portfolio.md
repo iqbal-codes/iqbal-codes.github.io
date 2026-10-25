@@ -1,14 +1,51 @@
-Siap bro. Untuk **website portfolio pribadi** kamu, pendekatannya memang boleh lebih technical daripada Labq.dev. Kalau Labq.dev menjual “problem bisnis + workflow solution”, portfolio pribadi kamu harus menunjukkan:
+# Technical Portfolio Projects
 
-> **project context → role → technical contribution → architecture/approach → technologies → measurable impact**
+## 0. Pabriq — Operational System for Made-to-Order Workshops
 
-Ini penting karena software engineering portfolio idealnya tidak cuma menampilkan tools, tapi juga keputusan teknis, problem solving, dan dampak ke sistem/produk. Secara umum, engineering itu memang tentang merancang, membangun, menguji, dan memperbaiki sistem/proses untuk menyelesaikan masalah nyata. ([University of Bath][1]) Untuk konteks software, investasi pada testing juga penting untuk memungkinkan tim merilis perubahan lebih cepat dan lebih aman. ([arXiv][2])
+**Company:** labq.dev (own product)
+**Role:** Founder & Product Engineer
+**Type:** Multi-tenant B2B SaaS, order-to-delivery workflow
+**Platform:** Web app + customer portal + operator view
+**Context:** Live in production since 2026
 
-Di bawah ini aku susun list lengkap dari portfolio PDF kamu + tambahan DC Trans Nabati yang kamu ceritakan. Project dari PDF mencakup eFishery, Pertamina Bina Medika IHC, Virtual Spirit, dan Komers.
+### Project overview
+
+Pabriq is an operational system for custom manufacturing workshops — screen printing, apparel, and made-to-order production. It replaces the spreadsheet-and-WhatsApp workflow most small workshops run on: messy order chats, tiered price lists written on paper, physical work orders, and invoices built by hand.
+
+The product covers the whole order-to-delivery path: tiered pricing, order intake, digital work orders for the production floor, production tracking, invoicing with payment reconciliation, and a customer portal that shows progress without requiring a login.
+
+### What I worked on
+
+- Built the product end to end, from pricing engine to customer portal.
+- Designed the AI layer: sales and business agents that call the product's own tools, with business memory, permission rules, and eval checks.
+- Set up the agentic engineering workflow behind the build, so AI agents carried most of the implementation, testing, and documentation while I kept the architecture, the standards, and the review.
+- Kept financial data away from the operators who run the floor — work orders carry specs, not prices.
+
+### Technical approach
+
+- Multi-tenant by default: every query and view scoped to the organization.
+- Dynamic pricing engine handling volume tiers, size surcharges, add-ons, and personalization fees.
+- LLM agents with typed tools and guardrails, so agent actions stay inside allowed business operations.
+- Eval suites for agent behavior (prompt-injection refusal, tool-ordering regression) running alongside unit and end-to-end tests.
+
+### Key technical challenges
+
+- Keeping AI agents useful inside a real business system without letting them act unsafely.
+- Translating messy WhatsApp order messages into structured, priced order lines.
+- Keeping the product honest: every claim the marketing copy makes has to be implemented in the code.
+
+### Technologies
+
+TypeScript, React, TanStack Start/Query, Bun, Hono, PostgreSQL, Drizzle ORM, Mastra, Vercel AI SDK, PgVector, React-PDF, Midtrans, Vitest, Playwright, Docker, GitHub Actions.
+
+### Portfolio card version
+
+**Pabriq — Operational System for Made-to-Order Workshops**
+Multi-tenant SaaS for custom manufacturing workshops, covering tiered pricing, digital work orders, production tracking, invoicing, and a customer portal, with LLM sales and operations agents running inside the product. Live in production.
+
+**Tech focus:** Multi-tenant SaaS, order-to-delivery workflow, AI agents with tool access and guardrails, agentic engineering workflow, production reliability.
 
 ---
-
-# Technical Portfolio Projects
 
 ## 1. DC Trans — Logistics Dispatch & Shipment Tracking System
 
@@ -707,5 +744,3 @@ Developed and designed a React Native e-commerce app from scratch for selling te
 **Tech focus:** JavaScript, React Native, Redux Saga, CSS, mobile commerce UX.
 
 ---
-
-

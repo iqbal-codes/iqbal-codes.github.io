@@ -48,6 +48,25 @@ type Hackathon = {
 
 const PROJECTS: Project[] = [
   {
+    title: "Pabriq",
+    dates: "labq.dev · 2026 - Present",
+    description:
+      "Multi-tenant SaaS for made-to-order workshops — tiered pricing, digital work orders, production tracking, invoicing, and a customer portal, with LLM sales and operations agents. Live in production.",
+    detailDescription:
+      "Pabriq is an operational system for custom manufacturing workshops, replacing the spreadsheet-and-WhatsApp chaos that most small made-to-order shops run on.\n\n### What I worked on\n- Built the order-to-delivery product end to end, from tiered pricing and digital work orders to production tracking, invoicing, and piece-rate payroll\n- Designed the AI layer: sales and business agents that call the product's own tools, with business memory, permission rules, and eval checks\n- Set up the agentic engineering workflow behind the build, so AI agents carried most of the implementation, testing, and documentation\n\n### Key focus\nKept the scope tight and problem-first: understand the real operational pain, decide what is worth building, and ship the smallest version that actually works in a workshop.",
+    technologies: [
+      "TypeScript",
+      "React",
+      "TanStack",
+      "Bun",
+      "PostgreSQL",
+      "Drizzle",
+      "Mastra",
+      "AI Agents",
+      "Multi-tenant",
+    ],
+  },
+  {
     title: "DC Trans",
     dates: "Nabati · 2025 - 2026",
     description:
@@ -156,9 +175,9 @@ export const DATA = {
   location: "Bandung, Indonesia",
   locationLink: "https://www.google.com/maps/place/Bandung,+West+Java",
   description:
-    "Senior Software Engineer building end-to-end web and mobile products, leveraging AI-native workflows to ship faster without sacrificing quality.",
+    "Senior AI Product Engineer — agentic engineering and product architecture. Building production software with AI agents, starting from real operational problems.",
   summary:
-    "I’m a Senior Software Engineer with 7+ years of experience building production-grade web and mobile applications across logistics, healthcare, and internal business platforms. My background is strong in frontend engineering, but my work has grown into end-to-end product delivery, from user-facing systems to backend integrations, operational workflows, and release processes.\n\nToday, I focus on solving real business problems with pragmatic software. I use AI-native and agentic workflows to accelerate delivery, reduce manual effort, and improve engineering leverage, while staying grounded in solid architecture, testing, and production reliability.\n\nI care about building software that is maintainable, fast to evolve, and trusted in production.",
+    "I’m a Senior AI Product Engineer with 8 years of experience building production software across logistics, healthcare, agriculture, and internal platforms.\n\nSince April 2026 I’ve been running labq.dev, a small studio building software, AI, and automation for Indonesian businesses. I work problem-first: understand the real operational pain, decide what is actually worth building, then ship the smallest version that works. Pabriq, a multi-tenant SaaS for made-to-order workshops, is live in production with LLM sales and operations agents built in.\n\nMy focus has shifted to agentic engineering — I set the architecture, the standards, and the review, and let AI agents carry the heavy lifting of implementation, testing, and documentation. Delivery gets faster without giving up code quality or product judgment.",
   avatarUrl: "/profile-photo.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -175,6 +194,10 @@ export const DATA = {
     { name: "Docker", image: "/docker-logo.png" },
     { name: "Turborepo", image: "/turborepo.png" },
     { name: "Jest", image: "/jest-logo.png" },
+    { name: "Mastra" },
+    { name: "AI Agents" },
+    { name: "Bun" },
+    { name: "Hono" },
   ] satisfies Skill[],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
@@ -209,6 +232,18 @@ export const DATA = {
   },
   work: [
     {
+      company: "labq.dev",
+      href: "https://labq.dev",
+      badges: [],
+      location: "Bandung, Indonesia",
+      title: "Founder & Product Engineer",
+      logoUrl: "/labq-logo.webp",
+      start: "Apr 2026",
+      end: "Present",
+      description:
+        "Run a small studio building software, AI, and automation for Indonesian businesses, starting from the real problem in the operation instead of from a technology idea. Built and shipped Pabriq to production — a multi-tenant SaaS for made-to-order workshops that turns messy WhatsApp and spreadsheet ordering into pricing, production tracking, invoicing, and a customer portal. Built the AI layer of that product: sales and operations agents with real business context, tool access, permission rules, and eval checks. Set up an agentic engineering workflow so AI agents take on most of the implementation, testing, and documentation while I keep the architecture, the standards, and the review.",
+    },
+    {
       company: "PT Kaldu Sari Nabati Indonesia (KSNI)",
       href: "",
       badges: [],
@@ -242,14 +277,14 @@ export const DATA = {
       start: "Sep 2020",
       end: "May 2023",
       description:
-        "Led frontend development for a healthcare product from concept to production in close collaboration with stakeholders. Built reusable React component libraries that cut feature delivery time by roughly 50%, established coding standards and review practices, and improved maintainability and performance across healthcare workflows.",
+        "Full-time until October 2022, then part-time. Led frontend development for a healthcare product from concept to production in close collaboration with stakeholders. Built reusable React component libraries that cut feature delivery time by roughly 50%, established coding standards and review practices, and improved maintainability and performance across healthcare workflows.",
     },
     {
       company: "Virtual Spirit",
       href: "",
-      badges: [],
+      badges: ["Part-time"],
       location: "Malaysia (Remote)",
-      title: "Frontend Engineer",
+      title: "Frontend Engineer (Part-time)",
       logoUrl: "/vs-logo.jpeg",
       start: "Mar 2019",
       end: "Jul 2022",
